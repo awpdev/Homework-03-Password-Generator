@@ -75,7 +75,7 @@ function generatePassword() {
   var pwText = "";
   var validated = false;
 
-  // This will initialize a string and add characters to it. The process will repeat until validation has passed.
+  // This will initialize a string and add characters to it, then validate that string. The process will repeat until validation has passed.
   while (!validated) {
     pwText = "";
     for (let i = 0; i < numberOfChars; i++) {
@@ -109,7 +109,7 @@ function validatePassword(str, lo, up, no, sp) {
           if (!up && !no && !sp) {
             return true; // if only lowercase letters are required validation is complete
           } else {
-            next = true; // changes flag, otherwise will execute line 118
+            next = true; // changes flag, otherwise will execute line 117
           }
         }
       }
